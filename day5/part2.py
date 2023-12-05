@@ -19,12 +19,18 @@ for line in f:
 
     info[i].append(line.split())
 
-seeds = info.pop(0)
+seed_ranges = info.pop(0)
+seeds = []
+
+for x in range(int(len(seed_ranges[0]) / 2)):
+    for y in range(int(seed_ranges[0][(x * 2) + 1])):
+        seeds.append(int(seed_ranges[0][x * 2]) + y)
+
+print(seeds)  # <------------ Code doesn't even get to here before throwing memory error lol I have no idea
 
 lowest = 999999999999999999999999999999999
 
-for seed in seeds[0]:
-    seed = int(seed)
+for seed in seeds:
     curr = seed
     for x in range(len(info)):
         for y in range(len(info[x])):

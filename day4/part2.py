@@ -1,5 +1,6 @@
 import time
 
+
 def count_cards(cards):
     global ans
 
