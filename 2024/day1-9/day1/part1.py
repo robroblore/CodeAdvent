@@ -1,5 +1,5 @@
 # This one was done on a separate machine and I won't bother to do it again :)
-f = open("input1.txt", "r")
+f = open("input.txt", "r")
 l, r = [], []
 for x in f.readlines():
     x = x.rstrip().split("   ")
